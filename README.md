@@ -33,7 +33,7 @@ I have trained and tested a model using neural network for digit recognition in 
 The handwrittenNN.py file trains on 60,000 sample and tests on 10,000 sample. To run the file, execute the following step
 
 ```powershell
-python3 handwrittenNN.py -hn 200 -lr 0.2 -e 10
+python3 handwrittenNN.py -hn 500 -lr 0.2 -e 10
 ```
 
 where,
@@ -41,9 +41,9 @@ where,
 | Parameter | Details                                  |
 | --------- | ---------------------------------------- |
 | -in       | Number of Neurons in Input Layer(optional) ***[Default: 784]*** |
-| -hn       | Number of Neurons in Hidden Layer, ***[Default: 200]*** |
+| -hn       | Number of Neurons in Hidden Layer, ***[Default: 800]*** |
 | -on       | Number of Neurons in output Layer(optional) ***[Default: 10]*** |
-| -lr       | Learning rate or step size ***[Default: 0.2]*** |
+| -lr       | Learning rate or step size ***[Default: 0.15]*** |
 | -e        | Number of epochs ***[Default: 5]***      |
 
 ## Test Images Classification Output:
@@ -58,15 +58,15 @@ descent, but it is still useful to see the general idea that there is a sweet sp
 
 ![Performance Vs. Learning Rate](https://github.com/karan6181/RecogHandwrittenDigitsUsingNN/blob/master/Output/Images/performanceVSLearningRate.PNG)
 
-The plot suggested that between a learning rate of 0.1 and 0.3 there might be better performance.
+The plot suggested that between a learning rate of 0.1 and 0.2 there might be better performance.
 
 ### Doing Multiple Runs:
 
-The next improvement I can do is to repeat the training several times against the data set. Intuition suggests the more training you do the better the performance. But as know that too much training is actually bad because the network **overfits** to the training data, and then performs badly against new data that it hasn’t seen before. 
+The next improvement I did was to repeat the training several times against the data set. Intuition suggests the more training you do the better the performance. But as we know that too much training is actually bad because the network **overfits** to the training data, and then performs badly against new data that it hasn’t seen before. 
 
 ![Performance Vs. Number of Epochs](https://github.com/karan6181/RecogHandwrittenDigitsUsingNN/blob/master/Output/Images/performanceVSnumOfEpochs.PNG)
 
-As we can see from the plot that results are not quite so predictable. We can see the high performance during epoch 5 to 10 and then after it degrades and this may be due to overfitting.
+As we can see from the plot that results are not quite so predictable. We can see the high performance during epoch 6 to 10.
 
 ### Change Network Shape:
 
@@ -76,7 +76,9 @@ The following plots a graph showing number of hidden nodes vs performance
 
 ![Performance Vs. Number of neurons in Hidden Layer](https://github.com/karan6181/RecogHandwrittenDigitsUsingNN/blob/master/Output/Images/performanceVsHiddenNode.PNG)
 
+The plot suggested that between a Hidden nodes of 600 to 1000 there might be better performance.
 
+------
 
 ### Outputs:
 
@@ -91,17 +93,17 @@ Following figure shows the performance and confusion matrix.
 
 1. **Confusion matrix, without normalization**
 
-   ![Confusion Matrix without Normalization](https://github.com/karan6181/RecogHandwrittenDigitsUsingNN/blob/master/Output/Images/unnorm04.png)
+   ![Confusion Matrix without Normalization](https://github.com/karan6181/RecogHandwrittenDigitsUsingNN/blob/master/Output/Images/withoutNormalize.png)
 
 2. **Normalized confusion matrix**
 
-   ![Confusion Matrix with Normalization](https://github.com/karan6181/RecogHandwrittenDigitsUsingNN/blob/master/Output/Images/norm04.png)
+   ![Confusion Matrix with Normalization](https://github.com/karan6181/RecogHandwrittenDigitsUsingNN/blob/master/Output/Images/withNormalize.png)
 
 ------
 
 **Trained CSV File:**
 
-Since the MNIST train csv file is huge(107MB), I can't upload on github. So please download the MNIST train csv from here:
+Since the MNIST train csv file is huge(107MB), I can't upload on Github. So please download the MNIST train csv from here:
 
 https://drive.google.com/open?id=0B81PAaZPCK-yeXk3ZXlndktCVms
 
