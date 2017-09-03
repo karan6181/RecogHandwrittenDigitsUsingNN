@@ -16,7 +16,7 @@ I have trained and tested a model using neural network for digit recognition in 
 
 ### Dependencies:
 
-- Python 2.7+
+- Python 3.5+
 
 - Scikit-learn
 
