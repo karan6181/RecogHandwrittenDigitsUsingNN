@@ -275,11 +275,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-in", "--inputnode", dest="inputNode", default=784,
                         type=int, help="Number of Neuron in Input Layer")
-    parser.add_argument("-hn", "--hiddennode", dest="hiddenNode", default=200,
+    parser.add_argument("-hn", "--hiddennode", dest="hiddenNode", default=800,
                         type=int, help="Number of Neuron in Hidden Layer")
     parser.add_argument("-on", "--outputnode", dest="outputNode", default=10,
                         type=int,help="Number of Neuron in output Layer")
-    parser.add_argument("-lr", "--learningrate", dest="learningRate", default=0.20,
+    parser.add_argument("-lr", "--learningrate", dest="learningRate", default=0.15,
                         type=float, help="Learning rate or step size")
     parser.add_argument("-e", "--epochs", dest="epochs", default=5,
                         type=int, help="Number of epochs")
